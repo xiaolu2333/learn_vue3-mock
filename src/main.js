@@ -1,4 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+/* jshint esversion: 6 */
 
-createApp(App).mount('#app')
+import {createApp} from "vue";
+import App from "./App.vue";
+import Mock from 'mockjs';
+
+// 引入mock数据
+import './mock/index.js';
+// 启动mock
+Mock.setup({});
+
+createApp(App)
+  .mount("#app");
